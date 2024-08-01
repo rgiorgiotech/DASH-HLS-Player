@@ -1,0 +1,47 @@
+{
+  "name": "dashplayer",
+  "version": "1.0.0",
+  "description": "A simple Electron DASH & HLS player.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Made with <3 by Giorgio",
+  "build": {
+    "appId": "com.rgiorgiotech.dashplayer",
+    "mac": {
+      "category": "public.app-category.video",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "default",
+          "arch": [
+            "universal"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^XX.XX.XX",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {}
+}

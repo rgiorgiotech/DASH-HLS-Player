@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DASH Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: linear-gradient(to right, #3bbdf0, #0287cf);
+      color: #333;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #container {
+      display: flex;
+      justify-content: space-between;
+      height: 80vh; /* Change the height as needed */
+    }
+    #buttons {
+      display: flex;
+      flex-wrap: wrap; /* Allows you to display buttons on multiple lines */
+      width: 40%;
+      overflow-y: auto; /* Vertical scroll */  
+      height: 100%;
+    }
+    .category {  
+      flex-basis: 100%;  
+    }
+    button {
+      display: inline-block;
+      margin: 10px;
+      width: calc(50% - 20px); /* Buttons in two columns with margin */
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #4682B4;
+      color: white;
+      transition: background 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background: #5A9BD4;
+      transform: scale(1.05);
+    }
+    #video-container {
+      flex: 2; /* It takes up twice as much space as buttons */
+      position: sticky; /* Fixes player */  
+      top: 20px; /* Distance from top */  
+      align-self: flex-start;
+      display: none; /* Initially hides video container */
+      max-width: 70%;
+    }
+    video {
+      width: 100%;
+      border: none; /* Removes the border */
+      margin: 0; /* Removes margins */
+      padding: 0; /* Removes padding */
+      display: block; /* Show video as block element */
+    }
+  </style>  
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <h2>Choose your preferred stream.</h2>
+  <div id="container">
+    <div id="buttons"></div>
+    <div id="video-container">
+      <video id="video" controls></video>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.8/shaka-player.compiled.js"></script>
+  <script src="renderer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const video = document.getElementById('video');
+        
+        video.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+
+        video.addEventListener('dblclick', (event) => {
+            event.preventDefault();
+            if (!document.fullscreenElement) {
+                video.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+    });
+  </script>
+</body>
+</html>

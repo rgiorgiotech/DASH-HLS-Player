@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Channel 1",
+      "type": "cat1",
+      "manifestUrl": "https://cdn.bitmovin.com/content/assets/art-of-motion-dash-hls-progressive/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd",
+      "keyId": "",
+      "keyValue": ""
+    },
+    {
+      "title": "Channel 2",
+      "type": "cat2",
+      "manifestUrl": "https://cdn.bitmovin.com/content/assets/art-of-motion-dash-hls-progressive/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd",
+      "keyId": "",
+      "keyValue": ""
+    }
+  ]
+
