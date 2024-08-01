@@ -1,5 +1,6 @@
 # DASH & HLS Player
 A simple Electron DASH-HLS player
+![App screenshot](https://github.com/rgiorgiotech/DASH-HLS-Player/blob/main/demo-screenshot2.jpg)
 
 ## How it works
 The project consists of a simple app created with the Electron framework, which uses the Shaka Player libraries for the playback of HLS and DASH streams. The app allows users to enter URLs or the direct path to the media file if it is intended to be placed in the root of the project. The app also supports ClearKeys (keyId and keyValue) for DRM content.
